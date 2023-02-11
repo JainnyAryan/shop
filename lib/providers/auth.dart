@@ -30,7 +30,7 @@ class Auth with ChangeNotifier {
 
   Future<void> signup(String email, String password) async {
     final url = Uri.parse(
-        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDABE8Oc0YWPN8wANFOwYvDRD5f4n6y8as");
+        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=API-KEY");
     try {
       final response = await http.post(
         url,
@@ -67,7 +67,7 @@ class Auth with ChangeNotifier {
 
   Future<void> login(String email, String password) async {
     final url = Uri.parse(
-        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDABE8Oc0YWPN8wANFOwYvDRD5f4n6y8as");
+        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=API-KEY");
     try {
       final response = await http.post(
         url,
